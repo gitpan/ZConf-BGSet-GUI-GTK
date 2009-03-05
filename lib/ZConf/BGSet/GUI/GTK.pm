@@ -12,11 +12,11 @@ ZConf::BGSet::GUI::GTK - GTK GUI for ZConf::BGSet
 
 =head1 VERSION
 
-Version 0.0.0
+Version 0.0.1
 
 =cut
 
-our $VERSION = '0.0.0';
+our $VERSION = '0.0.1';
 
 
 =head1 SYNOPSIS
@@ -79,7 +79,7 @@ sub new {
 	my $self={error=>undef, errorString=>undef};
 	bless $self;
 
-	$self->{zbg}=ZConf::BGSet->new(%args);
+	$self->{zbg}=ZConf::BGSet->new(\%args);
 	if ($self->{zbg}->{error}) {
 		warn('ZConf-BGSet-GUI-GTK new: Initializing "ZConf::BGSet" failed. '.
 			 'error="'.$self->{zbg}->{error}.'" errorString="'.
